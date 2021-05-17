@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="style2.css" />
+<link rel="stylesheet" href="C:/xampp/htdocs/updriven_theme/assets/fonts/includes.css" />
+
+<link rel="stylesheet" href="C:/xampp/htdocs/updriven_theme/assets/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="C:/xampp/htdocs/updriven_theme/assets/node_modules/slick-carousel/slick/slick.css" />
+
+<link rel="stylesheet" href="C:/xampp/htdocs/updriven_theme/assets/node_modules/@fortawesome/fontawesome-free/css/all.css" />
+
+<link rel="stylesheet" href="C:/xampp/htdocs/updriven_theme/assets/lib/fancybox-3.5.7/dist/jquery.fancybox.min.css" />
+<link rel="stylesheet" href="C:/xampp/htdocs/updriven_theme/assets/lib/simplebar/simplebar.css" />
+<link rel="stylesheet" href="C:/xampp/htdocs/updriven_theme/assets/lib/vanilla-datepicker/dist/css/datepicker.min.css" />
+<link rel="stylesheet" href="C:/xampp/htdocs/updriven_theme/assets/lib/aos-2.3.1/aos.min.css" />
+
+<link rel="stylesheet" href="C:/xampp/htdocs/updriven_theme/assets/css/grids.css" />
+<link rel="stylesheet" href="C:/xampp/htdocs/updriven_theme/assets/css/style.css" />
+<link rel="stylesheet" href="C:/xampp/htdocs/updriven_theme/assets/css/navs.css" />
+<link rel="stylesheet" href="C:/xampp/htdocs/updriven_theme/assets/css/blocks.css" />
+<style>
+html, body{height:100%;}
+
+/* Popup Icon */
+.popup-icon{position:relative; margin:2rem 3rem;}
+
+/* Popup Comment */
+.popup-comment{
+    position:absolute; top:calc(100% + .5rem); left:0; background:#ffffff;
+    display:block; width:auto; border:1px solid #dddddd; border-radius:.25rem;
+    opacity:0; pointer-events:none; width:100%; max-width:37rem;
+    transition:top .25s, opacity .25s;
+}
+.popup-comment.active{top:100%; opacity:1; pointer-events:auto; z-index:90;}
+.popup-comment > .wrapper{position:relative; width:100%;}
+.popup-comment .blocks{
+    width:100%; display:flex; align-items:center; justify-content:space-between;
+    border-bottom:1px solid #dddddd; padding:.5rem .75rem .75rem .75rem;
+}
+.popup-comment .blocks.no-padding{padding:0;}
+.popup-comment .blocks:last-child{border-bottom:0; background:#f4f4f4;}
+.popup-comment .block{display:flex; align-items:center;}
+.popup-comment .block.w-full{width:100%;}
+
+.popup-comment .menu{    
+    display:flex; align-items:center; font-size:.9375rem; font-weight:400;
+    color:#0d0e0d; white-space:nowrap; margin:0 1.5rem 0 0;
+    transition:filter .25s, color .25s;
+}
+.popup-comment .menu:hover{color:#166c74;}
+.popup-comment .menu:last-child{margin-right:0}
+.popup-comment .menu .icon{display:block; margin:0 .5rem 0 0;}
+.popup-comment .menu .icon img{
+    display:block; height:1rem; width:auto; filter:grayscale(100%);
+    transform:translateY(-.0625rem);
+}
+.popup-comment .menu:hover .icon img{filter:grayscale(0);}
+.popup-comment input, .popup-comment select, .popup-comment textarea{
+    border:0!important; width:100%!important; padding:.75rem!important;
+}
+.popup-comment select{padding:.75rem .5rem!important;}
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <?php for($i=0; $i<10; $i++){?>
+        <div style="position:relative;">
+            <a class="btn-popup-toggle" href="#" data-popup="<?= $i ?>">
+                Hover Me
+            </a>
+
+            <div class="popup-comment" data-popup="<?= $i ?>">
+                <div class="wrapper">
+
+                    <div class="blocks">
+                        <div class="block fw-wrap mr-2">
+                            <a class="menu mt-1" href="#">
+                                <div class="icon">
+                                    <img src="C:/xampp/htdocs/updriven_theme/assets/img/icon/message.png" alt="Image Icon" />
+                                </div>
+                                <div class="text">Message</div>
+                            </a>
+                            <a class="menu mt-1" href="#">
+                                <div class="icon">
+                                    <img src="C:/xampp/htdocs/updriven_theme/assets/img/icon/poll.png" alt="Image Icon" />
+                                </div>
+                                <div class="text">Poll</div>
+                            </a>
+                            <a class="menu mt-1" href="#">
+                                <div class="icon">
+                                    <img src="C:/xampp/htdocs/updriven_theme/assets/img/icon/event.png" alt="Image Icon" />
+                                </div>
+                                <div class="text">Event</div>
+                            </a>
+                            <a class="menu mt-1" href="#">
+                                <div class="icon">
+                                    <img src="C:/xampp/htdocs/updriven_theme/assets/img/icon/alert.png" alt="Image Icon" />
+                                </div>
+                                <div class="text">Urgen alert</div>
+                            </a>
+                        </div>
+                        <div class="block">
+                            <a class="menu mt-1 btn-popup-toggle" href="#" data-popup="<?= $i ?>">
+                                <div class="icon">
+                                    <img src="C:/xampp/htdocs/updriven_theme/assets/img/icon/close.png" alt="Image Icon" />
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="blocks no-padding">
+                        <div class="block w-full">
+                            <select>
+                                <option value="" disabled selected>Choose category</option>
+                                <option value="1">Category 1</option>
+                                <option value="2">Category 2</option>
+                                <option value="3">Category 3</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="blocks no-padding">
+                        <div class="block w-full">
+                            <input type="text" placeholder="Subject" />
+                        </div>
+                    </div>
+
+                    <div class="blocks no-padding">
+                        <div class="block w-full">
+                            <textarea rows="5" placeholder="Message"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="blocks no-padding">
+                        <div class="block w-full">
+                            <select>
+                                <option value="1">Visible to Anyone</option>
+                                <option value="2">Visible to Friends Only</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="blocks fw-wrap">
+                        <div class="block">
+                            <div class="btns mr-2">
+                                <a class="btn btn-action btn-color-02 pl-3 pr-3 mt-1" href="#">
+                                    <img class="img-icon mr-1" src="C:/xampp/htdocs/updriven_theme/assets/img/icon/add-photo.png" alt="Image Icon" />
+                                    Add photo or video
+                                </a>
+                                <a class="btn btn-action btn-color-02 pl-3 pr-3 mt-1" href="#">
+                                    <img class="img-icon mr-1" src="C:/xampp/htdocs/updriven_theme/assets/img/icon/attach2.png" alt="Image Icon" />
+                                    Attached file
+                                </a>
+                            </div>
+                        </div>
+                        <div class="block">
+                            <div class="btns">
+                                <a class="btn btn-action btn-color-01 mt-1" href="#">
+                                    <span>POST</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $('.btn-popup-toggle').click(function(e){
+            e.preventDefault();
+            var id = $(this).data('popup');
+            if(id!==undefined){
+                $('.popup-comment[data-popup="'+id+'"]').toggleClass('active');
+            }
+        });
+    </script>
+</body>
+</html>
