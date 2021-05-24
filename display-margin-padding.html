@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container{width:800px;height:800px;}
+        .BGCblue{background-color: blue;color:white;}
+        .BGCgreen{background-color: green;}
+        .BGCyellow{background-color: yellow;}
+        .BGCred{background-color: red;}
+        .BGCwhite{background-color: white;}
+        .DisplayBlock{display: block;}
+        .DisplayInline{display: inline;}
+        .DisplayInlineBlock{display: inline-block;}
+        .btns{width:100%;}
+        .btn{display:inline-block;}
+        .btn-color{background-color:brown;}
+        .ConMarginPadding1{width:300px;height:30px;}
+    </style>
+</head>
+<body>
+    <div class="container BGCgreen">
+        <div class="DisplayBlock BGCblue">
+           display:block [text only] = จองพื้นที่ทั้งหมด
+        </div>
+        <div class="DisplayInline BGCyellow">
+            display:inline [text only] = พอดีเนื้อหา
+        </div>
+        <div class="DisplayInlineBlock BGCred">
+            display:inline-block [text only]
+        </div>
+        <div class="DisplayBlock BGCblue" style="width:350px">
+           display:block width:-350px [text only] ไม่ให้ใครขึ้นต่อ
+        </div>
+        <div class="DisplayInline BGCyellow">
+            display:inline [text only]
+        </div>
+        <div class="DisplayInlineBlock BGCred" style="width:500px">
+            display:inline-block width:500px [text only]
+        </div>
+        <div class="DisplayInline BGCyellow">
+            display:inline [text only]
+        </div>
+
+        <div style="width:200px;background-color:black;color:white;">
+            margin-ไม่ขยายข้างใน<br>
+            padding-ขยายข้างใน<br>
+        </div>
+        <div class="ConMarginPadding1 BGCwhite">
+            <div class="BGCblue" style="margin:5px">dB-margin:5px</div>
+        </div>
+        <div style="width:200px;height:10px;background-color: black;"></div>
+        <div class="ConMarginPadding1 BGCwhite">
+            <div class="DisplayInline BGCblue" style="margin:5px">dIn-margin:5px</div>
+        </div>
+        <div style="width:200px;height:10px;background-color: black;"></div>
+        <div class="ConMarginPadding1 BGCwhite">
+            <div class="DisplayInlineBlock BGCblue" style="margin:5px">dInB-margin:5px</div>
+        </div>
+        <div style="width:200px;height:10px;background-color: black;"></div>
+        <div class="ConMarginPadding1 BGCwhite">
+            <div class="BGCblue" style="padding:5px">dB-padding:5px</div>
+        </div>
+        <div style="width:200px;height:10px;background-color: black;"></div>
+        <div class="ConMarginPadding1 BGCwhite">
+            <div class="DisplayInline BGCblue" style="padding:5px">dIn-padding:5px</div>
+        </div>
+        <div style="width:200px;height:10px;background-color: black;"></div>
+        <div class="ConMarginPadding1 BGCwhite">
+            <div class="DisplayInlineBlock BGCblue" style="padding:5px">dInB-padding:5px</div>
+        </div>
+        <div style="width:200px;background-color:black;color:white;">display:b/b and poistion:abs/abs</div>
+        <div class="DisplayBlock BGCblue" style="position:absolute;width:100px;height:100px">
+            <div class="DisplayBlock BGCwhite" style="position:absolute;top:10px;left:10px;color:black;">top:10px;<br>left:10px;</div>
+
+        </div>
+
+
+
+
+
+    </div>
+</body>
+</html>
